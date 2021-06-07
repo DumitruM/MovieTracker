@@ -1,10 +1,7 @@
 //
 //  AppDelegate.swift
 //  Movie Tracker
-//
-//  Created by ZappyCode on 10/31/19.
-//  Copyright © 2019 ZappyCode. All rights reserved.
-//
+
 
 import UIKit
 import CoreData

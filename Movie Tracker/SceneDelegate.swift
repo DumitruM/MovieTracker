@@ -1,10 +1,7 @@
 //
 //  SceneDelegate.swift
 //  Movie Tracker
-//
-//  Created by ZappyCode on 10/31/19.
-//  Copyright © 2019 ZappyCode. All rights reserved.
-//
+
 
 import UIKit
 import SwiftUI
@@ -24,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = ContentView().environment(\.managedObjectContext, context)
+        let movieStorage = MovieStorage()
+        let contentView = MovieList().environment(\.managedObjectContext, context).environmentObject(movieStorage)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
